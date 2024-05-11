@@ -1,0 +1,7 @@
+.avdersing {
+    text-align: center;
+    display: grid;
+    top: 50%;
+    color: darkred;
+    place-items: center;
+}
