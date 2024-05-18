@@ -1,0 +1,143 @@
+
+.game-conteiner {
+    width: 1000px;
+    height: 450px;
+    margin: 20px auto;
+    border: 1px solid;
+    position: relative;
+    overflow: hidden;
+    background-image: url('/static/img/mgtu_font.png');
+    background-size: auto;
+    animation: bg-move 35s linear infinite;
+
+}
+@keyframes bg-move {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 300%;
+    }
+}
+
+.player {
+    width: 100px;
+    height: 170px;
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    background-position: bottom;
+    background-image: url('/static/img/gordin_animation.gif');
+    background-size: cover;
+}
+
+.player.jump {
+    animation: jump 1.5s none;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 250px;
+    }
+    95% {
+        bottom: 10px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+.tubus {
+    width: 70px;
+    height: 105px;
+    background-image: url('/static/img/tubus_m.png');
+    background-size: auto;
+    position: absolute;
+    bottom: 0;
+    left: 80%;
+    animation: move 3s linear infinite;
+}
+
+.tubus-s {width: 40px; height: 70px; background-image: url('/static/img/tubus_s.png');}
+.tubus-m {width: 70px; height: 105px; background-image: url('/static/img/tubus_m.png');}
+.tubus-l {width: 100px; height: 120px; background-image: url('/static/img/tubus_l.png');}
+
+@keyframes move {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -10%;
+    }
+}
+
+.game-score {
+    font-size: 30px;
+    margin: 20px;
+    right: 0;
+    position: absolute;
+    width: 152px;
+    height: 70px;
+    background-color: rgba(148, 149, 150, 0.303);
+}
+
+.game-score span {
+    text-align: center;
+    right: 0;
+    margin-right: 20px;
+}
+.game-score div {
+    right: 0;
+    position: absolute;
+}
+
+.restart-game {
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.507);
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    z-index: 2;    
+}
+
+.restart-game.show {
+    visibility: visible;
+}
+
+.restart-game .content {
+    display: flex;
+}
+
+.restart-game .btn-restart-game {
+    border: none;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url('/static/img/restart.png');
+    background-color: rgba(255, 255, 255, 0);
+    background-size: contain;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.restart-game .text {
+    align-self: end;
+}
+
+.stop.game-conteiner, .stop.tubus {
+    animation-play-state: paused;
+}
+
+.stop.player {
+    background-image: url('/static/img/gordin.png');
+    animation-play-state: paused;
+}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Игра
+{% endblock %}
+{% block style%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/game.css') }}">
+{% endblock %}
+
+
+{% block body%}
+
+<div class="game-conteiner" onclick="jump()">
+    <div class="game-score">
+        <span>Отчислено:</span>
+        <div class="score"></div>
+    </div>
+    <div class="player"></div>
+    <div class="tubus"></div>
+    <div class="restart-game">
+        <div class="content">
+            <span class="text">ЗАНОВО</span>
+            <button onclick="restart()" class="btn-restart-game"></button>
+        </div>
+    </div>
+    <script src="static/scripts/game.js"></script>
+</div>
+{% endblock %}

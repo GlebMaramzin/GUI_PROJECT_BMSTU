@@ -1,7 +1,9 @@
-.avdersing {
+.adversting {
     text-align: center;
-    display: grid;
-    top: 50%;
+    bottom: 10%;
+    left: 35%;
     color: darkred;
-    place-items: center;
+    position: absolute;
+    padding: 5px;
+    font-size: 25px;
 }
