@@ -1,0 +1,9 @@
+.adversting {
+    text-align: center;
+    bottom: 10%;
+    left: 35%;
+    color: darkred;
+    position: absolute;
+    padding: 5px;
+    font-size: 25px;
+}

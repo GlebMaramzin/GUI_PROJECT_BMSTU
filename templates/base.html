@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title%}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block style%}{% endblock %}
+  </head>
+  <body>
+    <div class="top-bar">
+      <a href="student">Поиск студента</a>
+      <a href="group">Поиск группы</a>
+      <a href="teacher-schedule">Расписание преподавателя</a>
+      <button href="login">Войти</button>
+    </div>
+    {% block body%}{% endblock %}
+    <div class="about-us">
+      <a href="about">О нас</a>
+    </div>
+    <div class="secret">
+      <a href="game">Пасхалка</a>
+    </div>
+  </body>
+</html>

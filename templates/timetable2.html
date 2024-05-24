@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ТЕСТ</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <form action="" method="GET">
+            <div class="form-group">
+                <input type="search" class="form-control" placeholder="Преподаватель" name="q2" value="{{ request.args.get('q2', '') }}">
+                <button type="submit" class="btn btn-primary">Поиск</button>
+            </div>
+        </form>
+        {% for t in ts %}
+            <div>{{ t.group_title }}</div>
+        {% endfor %}
+    </div>
+</body>
+<script src="../scripts/bootstrap.min.js"></script>
+</html>
